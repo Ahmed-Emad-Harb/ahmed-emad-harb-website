@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b10">
+  <meta name="description" content="الموقع الشخصي للأستاذ أحمد عماد حرب، محامٍ، حاصل على ماجستير في القانون الجنائي والقانون العام، وباحث دكتوراه. يتولى القضايا الجنائية بصفة رئيسية إلى جانب مختلف القضايا. القاهرة، وسط البلد، أمام دار القضاء العالي.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="أحمد عماد حرب | محامٍ">
+  <meta property="og:description" content="القانون موقف ومسؤولية — المحاماة والقضايا الجنائية ومختلف القضايا.">
+  <title>أحمد عماد حرب | محامٍ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090b10;
+      --panel: #10141d;
+      --panel-soft: #131925;
+      --text: #f2f3f5;
+      --muted: #a7adba;
+      --blue: #547da9;
+      --blue-bright: #8eb5df;
+      --wine: #7d263e;
+      --wine-bright: #b34b67;
+      --gold: #c6a66b;
+      --line: rgba(210, 220, 235, .12);
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 12% 15%, rgba(49, 87, 128, .16), transparent 34%),
+        radial-gradient(ellipse at 88% 35%, rgba(111, 29, 56, .15), transparent 30%),
+        var(--bg);
+      font-family: "Cairo", Tahoma, sans-serif;
+      line-height: 1.85;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    .site-shell { position: relative; isolation: isolate; }
+    .site-shell::before, .site-shell::after {
+      content: ""; position: fixed; z-index: -1; pointer-events: none;
+      width: 42vw; height: 1px; opacity: .65; filter: blur(.2px);
+      transform: rotate(-28deg); transform-origin: center;
+    }
+    .site-shell::before { top: 24%; left: -14%; background: linear-gradient(90deg, transparent, rgba(105,159,210,.58), transparent); }
+    .site-shell::after { top: 66%; right: -16%; background: linear-gradient(90deg, transparent, rgba(174,67,94,.55), transparent); transform: rotate(28deg); }
+    .container { width: min(var(--max), calc(100% - 44px)); margin-inline: auto; }
+    .topbar {
+      position: relative; z-index: 5; border-bottom: 1px solid rgba(255,255,255,.07);
+      background: rgba(8, 10, 15, .72); backdrop-filter: blur(16px);
+    }
+    .nav { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 13px; min-width: 0; }
+    .monogram {
+      width: 44px; height: 44px; border: 1px solid rgba(198,166,107,.6); border-radius: 12px;
+      display: grid; place-items: center; color: var(--gold); font: 800 13px Manrope, sans-serif;
+      letter-spacing: -1px; background: linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.01));
+      box-shadow: inset 0 0 18px rgba(198,166,107,.06);
+    }
+    .brand-name { font-size: 15px; font-weight: 800; white-space: nowrap; }
+    .brand-sub { display: block; color: #8d95a4; font: 10px Manrope, sans-serif; letter-spacing: 2px; text-transform: uppercase; direction: ltr; text-align: right; margin-top: -3px; }
+    .nav-links { display: flex; align-items: center; gap: 29px; color: #c3c8d1; font-size: 13px; }
+    .nav-links a { transition: color .2s ease; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-contact { border: 1px solid rgba(198,166,107,.48); color: #e6d2ad; padding: 9px 17px; border-radius: 7px; font-size: 12px; transition: .2s; }
+    .nav-contact:hover { background: rgba(198,166,107,.12); border-color: var(--gold); }
+    .hero { min-height: 680px; display: grid; align-items: center; position: relative; padding: 92px 0 88px; }
+    .hero-grid { display: grid; grid-template-columns: 1.18fr .82fr; gap: 60px; align-items: center; }
+    .eyebrow { display: inline-flex; gap: 11px; align-items: center; color: var(--blue-bright); font-size: 12px; font-weight: 700; letter-spacing: .4px; margin-bottom: 19px; }
+    .eyebrow::before { content: ""; width: 34px; height: 1px; background: var(--blue-bright); box-shadow: 0 0 12px rgba(142,181,223,.65); }
+    h1 { margin: 0; font-size: clamp(32px, 6vw, 75px); line-height: 1.35; letter-spacing: -.9px; font-weight: 900; white-space: nowrap; }
+    h1 .first { display: inline; color: #f5f5f4; }
+    h1 .second { display: inline; color: #d9dce2; margin-right: .22em; }
+    .english-name { direction: ltr; text-align: right; font: 700 clamp(15px, 2vw, 21px) Manrope, sans-serif; letter-spacing: 2px; color: var(--gold); margin-top: 17px; }
+    .hero-rule { width: 90px; height: 2px; margin: 27px 0 22px auto; background: linear-gradient(90deg, var(--wine), var(--gold)); }
+    .hero-copy { max-width: 620px; color: #b8bec9; font-size: 16px; line-height: 2.15; margin: 0; }
+    .hero-copy strong { color: #f0e8dc; font-weight: 700; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 34px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 49px; padding: 0 22px; border-radius: 7px; font-size: 13px; font-weight: 700; transition: transform .2s, background .2s, border-color .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { color: #101116; background: linear-gradient(110deg, #d7bd8b, #b89459); box-shadow: 0 10px 28px rgba(198,166,107,.14); }
+    .btn-primary:hover { background: #e1c99d; }
+    .btn-ghost { color: #e2e5eb; border: 1px solid rgba(255,255,255,.19); background: rgba(255,255,255,.025); }
+    .btn-ghost:hover { border-color: rgba(142,181,223,.6); background: rgba(84,125,169,.1); }
+    .hero-art { min-height: 430px; display: grid; place-items: center; position: relative; }
+    .art-frame { width: min(100%, 390px); aspect-ratio: 1 / 1.08; position: relative; display: grid; place-items: center; }
+    .art-frame::before { content: ""; position: absolute; inset: 7% 9%; border: 1px solid rgba(198,166,107,.32); transform: rotate(7deg); border-radius: 48% 48% 8px 8px; }
+    .art-frame::after { content: ""; position: absolute; inset: 2% 15%; border: 1px solid rgba(92,139,187,.25); transform: rotate(-7deg); border-radius: 48% 48% 8px 8px; }
+    .seal { width: 74%; aspect-ratio: 1; border-radius: 50%; position: relative; display: grid; place-items: center; background: radial-gradient(circle at 48% 42%, #1b2533 0, #111720 46%, #0b0e14 72%); border: 1px solid rgba(198,166,107,.4); box-shadow: 0 0 0 12px rgba(198,166,107,.025), 0 0 70px rgba(57,95,137,.16), inset 0 0 40px rgba(255,255,255,.025); }
+    .seal::before { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(255,255,255,.09); border-radius: 50%; }
+    .scales { width: 48%; max-width: 170px; color: var(--gold); opacity: .92; filter: drop-shadow(0 0 17px rgba(198,166,107,.12)); }
+    .seal-caption { position: absolute; bottom: -28px; color: #7d8796; direction: ltr; letter-spacing: 4px; font: 10px Manrope, sans-serif; white-space: nowrap; }
+    .art-orbit { position: absolute; width: 10px; height: 10px; border-radius: 50%; background: var(--wine-bright); top: 14%; right: 17%; box-shadow: 0 0 25px 8px rgba(179,75,103,.18); }
+    .art-orbit.blue { width: 7px; height: 7px; top: auto; right: auto; bottom: 18%; left: 14%; background: var(--blue-bright); box-shadow: 0 0 25px 8px rgba(142,181,223,.18); }
+    .scroll-note { position: absolute; bottom: 26px; right: 50%; transform: translateX(50%); color: #687181; font: 9px Manrope, sans-serif; letter-spacing: 3px; direction: ltr; }
+    .section { padding: 92px 0; position: relative; }
+    .section-head { max-width: 690px; margin-bottom: 42px; }
+    .section-kicker { color: var(--wine-bright); font-size: 11px; font-weight: 800; letter-spacing: 2px; direction: ltr; text-align: right; }
+    h2 { margin: 9px 0 0; font-size: clamp(27px, 4vw, 40px); line-height: 1.5; font-weight: 800; }
+    .section-desc { color: var(--muted); font-size: 14px; margin: 12px 0 0; }
+    .credentials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .credential { min-height: 190px; padding: 27px 25px; border: 1px solid var(--line); border-radius: 10px; background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.012)); position: relative; overflow: hidden; }
+    .credential::after { content: ""; position: absolute; width: 120px; height: 120px; border: 1px solid rgba(84,125,169,.14); border-radius: 50%; left: -55px; bottom: -62px; }
+    .credential-icon { width: 40px; height: 40px; display: grid; place-items: center; color: var(--gold); border: 1px solid rgba(198,166,107,.28); border-radius: 9px; margin-bottom: 19px; background: rgba(198,166,107,.045); }
+    .credential h3 { margin: 0 0 7px; font-size: 16px; font-weight: 800; }
+    .credential p { margin: 0; color: #9da5b2; font-size: 12px; line-height: 1.9; }
+    .practice { background: linear-gradient(90deg, transparent, rgba(21,29,41,.72), transparent); border-block: 1px solid rgba(255,255,255,.055); }
+    .practice-grid { display: grid; grid-template-columns: .88fr 1.12fr; gap: 70px; align-items: center; }
+    .practice-mark { min-height: 300px; border: 1px solid rgba(125,38,62,.34); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: radial-gradient(ellipse at 50% 45%, rgba(125,38,62,.16), transparent 68%), rgba(255,255,255,.015); position: relative; overflow: hidden; }
+    .practice-mark::before, .practice-mark::after { content: ""; position: absolute; width: 130%; height: 1px; background: linear-gradient(90deg, transparent, rgba(179,75,103,.5), transparent); transform: rotate(-25deg); }
+    .practice-mark::after { transform: rotate(25deg); background: linear-gradient(90deg, transparent, rgba(84,125,169,.5), transparent); }
+    .practice-mark strong { position: relative; z-index: 1; color: #f1dce2; font-size: clamp(25px, 4vw, 38px); font-weight: 900; }
+    .practice-mark span { position: relative; z-index: 1; color: #9f8790; font: 10px Manrope, sans-serif; letter-spacing: 3px; direction: ltr; margin-top: 8px; }
+    .practice-copy h2 { margin-top: 0; }
+    .practice-copy p { color: #b5bcc7; font-size: 15px; line-height: 2.2; margin: 18px 0 0; }
+    .practice-copy p strong { color: #e4d1d6; }
+    .practice-line { display: flex; align-items: flex-start; gap: 13px; margin-top: 25px; color: #d1d5dc; font-size: 13px; }
+    .practice-line i { flex: 0 0 7px; height: 7px; border-radius: 50%; margin-top: 12px; background: var(--wine-bright); box-shadow: 0 0 14px rgba(179,75,103,.55); }
+    .contact-panel { border: 1px solid rgba(198,166,107,.22); border-radius: 13px; background: linear-gradient(135deg, rgba(22,28,39,.95), rgba(12,15,22,.96)); padding: clamp(25px, 5vw, 52px); display: grid; grid-template-columns: 1fr .9fr; gap: 45px; position: relative; overflow: hidden; }
+    .contact-panel::before { content: ""; position: absolute; width: 330px; height: 330px; border-radius: 50%; border: 1px solid rgba(84,125,169,.13); left: -165px; top: -185px; box-shadow: 0 0 0 28px rgba(84,125,169,.025), 0 0 0 58px rgba(84,125,169,.02); }
+    .contact-info, .contact-links { position: relative; z-index: 1; }
+    .contact-info h2 { margin-top: 0; }
+    .contact-info p { color: #aab2bf; font-size: 14px; line-height: 2.1; max-width: 470px; }
+    .address { display: flex; align-items: flex-start; gap: 12px; margin-top: 24px; color: #e2d4b9; font-size: 14px; }
+    .address svg { flex: 0 0 19px; margin-top: 5px; color: var(--gold); }
+    .contact-links { display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+    .contact-link { min-height: 66px; display: flex; align-items: center; gap: 15px; padding: 12px 17px; border: 1px solid rgba(255,255,255,.1); border-radius: 9px; background: rgba(255,255,255,.025); transition: .2s; }
+    .contact-link:hover { border-color: rgba(142,181,223,.5); background: rgba(84,125,169,.08); transform: translateX(-3px); }
+    .contact-icon { width: 39px; height: 39px; flex: 0 0 39px; border-radius: 9px; display: grid; place-items: center; color: var(--blue-bright); background: rgba(84,125,169,.13); }
+    .contact-link.whatsapp .contact-icon { color: #91c8a0; background: rgba(55,145,88,.12); }
+    .contact-link.facebook .contact-icon { color: #9bb9e4; background: rgba(55,105,171,.15); }
+    .link-label { display: block; font-size: 13px; font-weight: 800; }
+    .link-detail { display: block; color: #8993a2; font: 10px Manrope, sans-serif; direction: ltr; text-align: right; margin-top: 2px; }
+    footer { padding: 27px 0; border-top: 1px solid rgba(255,255,255,.07); color: #697383; font-size: 11px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+    .footer-name { color: #aeb5c0; font-weight: 700; }
+    .footer-en { direction: ltr; font: 10px Manrope, sans-serif; letter-spacing: 1.5px; }
+    svg { display: block; }
+    @media (max-width: 850px) {
+      .nav-links { gap: 16px; }
+      .hero-grid { grid-template-columns: 1fr .72fr; gap: 25px; }
+      .hero-art { min-height: 350px; }
+      .practice-grid { gap: 35px; }
+      .contact-panel { gap: 25px; }
+    }
+    @media (max-width: 650px) {
+      .container { width: min(100% - 32px, var(--max)); }
+      .nav { min-height: 70px; }
+      .nav-links { display: none; }
+      .nav-contact { padding: 8px 12px; font-size: 11px; }
+      .hero { min-height: auto; padding: 70px 0 65px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 25px; }
+      .hero-copy { font-size: 14px; }
+      .hero-art { min-height: 280px; grid-row: 1; }
+      .art-frame { width: min(72%, 275px); }
+      .seal-caption { font-size: 8px; }
+      .scroll-note { display: none; }
+      .section { padding: 68px 0; }
+      .credentials { grid-template-columns: 1fr; }
+      .credential { min-height: 155px; }
+      .practice-grid { grid-template-columns: 1fr; }
+      .practice-mark { min-height: 220px; }
+      .contact-panel { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "أحمد عماد حرب",
+    "alternateName": "Ahmed Emad Harb",
+    "jobTitle": "محامٍ",
+    "description": "محامٍ، حاصل على ماجستير في القانون الجنائي والقانون العام، وباحث دكتوراه. يتولى القضايا الجنائية بصفة رئيسية إلى جانب مختلف القضايا.",
+    "telephone": "+201500909132",
+    "sameAs": ["https://www.facebook.com/share/19Ma1LdZHE/", "https://wa.me/201500909132"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "وسط البلد، القاهرة",
+      "streetAddress": "أمام دار القضاء العالي",
+      "addressCountry": "EG"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="#home" aria-label="العودة إلى الرئيسية">
+          <span class="monogram">AH</span>
+          <span><span class="brand-name">أحمد عماد حرب</span><span class="brand-sub">LEGAL PROFILE</span></span>
+        </a>
+        <nav class="nav-links" aria-label="التنقل الرئيسي">
+          <a href="#about">نبذة مهنية</a>
+          <a href="#practice">مجالات العمل</a>
+          <a href="#contact">التواصل</a>
+        </nav>
+        <a class="nav-contact" href="https://wa.me/201500909132" target="_blank" rel="noopener noreferrer">تواصل مباشر</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="eyebrow">الموقع الشخصي والمهني</div>
+            <h1><span class="first">أحمد عماد</span><span class="second">حرب</span></h1>
+            <div class="english-name">AHMED EMAD HARB</div>
+            <div class="hero-rule"></div>
+            <p class="hero-copy">
+              <strong>محامٍ</strong> — ماجستير في القانون الجنائي والقانون العام، وباحث دكتوراه، وعضو الجمعية المصرية للاقتصاد السياسي والإحصاء والتشريع.
+              <br>رؤية قانونية تقوم على الدراسة الدقيقة، والطرح الواضح، والدفاع المهني المسؤول.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://wa.me/201500909132" target="_blank" rel="noopener noreferrer">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.3 11.8a8.3 8.3 0 0 1-12.3 7.3L4 20l.9-3.8a8.3 8.3 0 1 1 15.4-4.4Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 8.5c.2-.4.4-.4.7-.4h.5c.2 0 .3.1.4.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.2.2-.2.4 0 .6.5.9 1.3 1.6 2.2 2.1.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .4-.2 1.2-.7 1.5-.5.4-1.1.6-1.8.4-1.1-.3-2.5-1-3.8-2.3-1.1-1.1-1.9-2.5-2.1-3.5-.2-.7.1-1.3.5-1.8Z" fill="currentColor"/></svg>
+                تواصل عبر واتساب
+              </a>
+              <a class="btn btn-ghost" href="#about">التعرّف على المؤهلات</a>
+            </div>
+          </div>
+          <div class="hero-art" aria-label="شعار رمزي للعدالة">
+            <div class="art-frame">
+              <span class="art-orbit"></span><span class="art-orbit blue"></span>
+              <div class="seal">
+                <svg class="scales" viewBox="0 0 220 250" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <g stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M110 27v166M79 218h62M91 204h38M110 27l-12 18h24l-12-18Z"/>
+                    <path d="M48 76h124M110 45v31M48 76 25 132M48 76l23 56M172 76l-23 56M172 76l23 56"/>
+                    <path d="M14 132c2 18 16 28 34 28s32-10 34-28H14ZM138 132c2 18 16 28 34 28s32-10 34-28h-68Z"/>
+                    <path d="M79 218c5-10 15-15 31-15s26 5 31 15M93 45h34"/>
+                  </g>
+                  <path d="M110 10v10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="seal-caption">LAW · JUSTICE · RESPONSIBILITY</div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-note">SCROLL TO EXPLORE</div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-kicker">01 / PROFESSIONAL PROFILE</div>
+            <h2>المؤهلات والانتماء المهني</h2>
+            <p class="section-desc">خلفية أكاديمية وقانونية تدعم ممارسة مهنية قائمة على البحث والتحليل.</p>
+          </div>
+          <div class="credentials">
+            <article class="credential">
+              <div class="credential-icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2.5 8 12 13l9.5-5L12 3Z"/><path d="M6.5 10.2v5.1c3.5 2.7 7.5 2.7 11 0v-5.1M21.5 8v7"/></svg></div>
+              <h3>ماجستير في القانون</h3>
+              <p>تخصص في القانون الجنائي والقانون العام.</p>
+            </article>
+            <article class="credential">
+              <div class="credential-icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/><path d="M8 7h8M8 11h8"/></svg></div>
+              <h3>باحث دكتوراه</h3>
+              <p>اهتمام بالبحث القانوني والدراسة الأكاديمية المتخصصة.</p>
+            </article>
+            <article class="credential">
+              <div class="credential-icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M8 9h.01M16 9h.01"/></svg></div>
+              <h3>عضوية مهنية</h3>
+              <p>عضو الجمعية المصرية للاقتصاد السياسي والإحصاء والتشريع.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section practice" id="practice">
+        <div class="container practice-grid">
+          <div class="practice-mark">
+            <strong>القانون موقف</strong>
+            <span>DISCIPLINE · PRECISION · DEFENSE</span>
+          </div>
+          <div class="practice-copy">
+            <div class="section-kicker">02 / LEGAL PRACTICE</div>
+            <h2>مجالات العمل القانوني</h2>
+            <p>
+              يتولى الأستاذ أحمد عماد حرب <strong>القضايا الجنائية بصفة رئيسية</strong>، مع مباشرة مختلف أنواع القضايا والمسائل القانونية، وفق طبيعة كل نزاع وما يتطلبه من دراسة وإجراءات.
+            </p>
+            <div class="practice-line"><i></i><span>اهتمام خاص بالدفاع في القضايا الجنائية ودراسة الموقف القانوني وأوراق الدعوى.</span></div>
+            <div class="practice-line"><i></i><span>مباشرة مختلف القضايا الأخرى وتقديم الدعم القانوني بحسب موضوع كل قضية.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="contact-panel">
+            <div class="contact-info">
+              <div class="section-kicker">03 / GET IN TOUCH</div>
+              <h2>للتواصل والاستفسار</h2>
+              <p>للتواصل بشأن الاستفسارات القانونية أو تنسيق موعد، يُرجى استخدام إحدى وسائل الاتصال التالية.</p>
+              <div class="address">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                <span>القاهرة – وسط البلد – أمام دار القضاء العالي</span>
+              </div>
+            </div>
+            <div class="contact-links">
+              <a class="contact-link whatsapp" href="https://wa.me/201500909132" target="_blank" rel="noopener noreferrer" aria-label="التواصل عبر واتساب">
+                <span class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.3 11.8a8.3 8.3 0 0 1-12.3 7.3L4 20l.9-3.8a8.3 8.3 0 1 1 15.4-4.4Z"/><path d="M9 8.5c.2-.4.4-.4.7-.4h.5c.2 0 .3.1.4.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.2.2-.2.4 0 .6.5.9 1.3 1.6 2.2 2.1.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .4-.2 1.2-.7 1.5-.5.4-1.1.6-1.8.4-1.1-.3-2.5-1-3.8-2.3-1.1-1.1-1.9-2.5-2.1-3.5-.2-.7.1-1.3.5-1.8Z" fill="currentColor"/></svg></span>
+                <span><span class="link-label">واتساب</span><span class="link-detail">+20 150 090 9132</span></span>
+              </a>
+              <a class="contact-link" href="tel:+201500909132" aria-label="الاتصال الهاتفي">
+                <span class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.8 2.1Z"/></svg></span>
+                <span><span class="link-label">اتصال هاتفي</span><span class="link-detail">+20 150 090 9132</span></span>
+              </a>
+              <a class="contact-link facebook" href="https://www.facebook.com/share/19Ma1LdZHE/" target="_blank" rel="noopener noreferrer" aria-label="الصفحة الشخصية على فيسبوك">
+                <span class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.4 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.1c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5v2.1H6.8v3.2h2.9V21h3.7Z"/></svg></span>
+                <span><span class="link-label">الصفحة الشخصية على فيسبوك</span><span class="link-detail">Ahmed Emad Harb</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <span class="footer-name">أحمد عماد حرب — محامٍ</span>
+        <span>القاهرة · وسط البلد · أمام دار القضاء العالي</span>
+        <span class="footer-en">AHMED EMAD HARB © 2026</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
